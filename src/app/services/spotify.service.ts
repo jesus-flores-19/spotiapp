@@ -19,5 +19,10 @@ export class SpotifyService {
       
     }) 
   }
+  
+  getNewPlaylist(){
+    let data = {};
+    console.log(data);
+  }
  
 }
