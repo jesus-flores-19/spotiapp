@@ -1,12 +1,12 @@
-<h1 class="my-3">Hola Mundo <small class="text-muted">Bienvenidos</small></h1>
-<div class="row row-cols-3">
+<h1 class="my-3">Escuchado Recientemente <small class="text-muted"></small></h1>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="col my-1" *ngFor="let cancion of nuevasCanciones">
-        <div class="card" style="width: 20rem;">
+        <div class="card bg-dark">
             <img [src]="cancion.images[0].url" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{cancion.name}}</h5>
+                <h5 class="card-title text-white">{{cancion.name}}</h5>
                 <p class="card-text">
-                    <span class="badge bg-primary" *ngFor="let artista of cancion.artists">{{artista.name}}</span>
+                    <span class="text-muted" *ngFor="let artista of cancion.artists">{{artista.name}} </span>
                 </p>
             </div>
         </div>
