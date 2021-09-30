@@ -2,7 +2,7 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="col my-1" *ngFor="let cancion of nuevasCanciones">
         <div class="card bg-dark">
-            <img [src]="cancion.images[0].url" class="card-img-top" alt="...">
+            <img [src]="cancion.images | noimage" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-white">{{cancion.name}}</h5>
                 <p class="card-text">
