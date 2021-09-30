@@ -17,9 +17,7 @@ export class SpotifyService {
     })
 
     return this.http.get("https://api.spotify.com/v1/browse/new-releases?country=MX",{headers})
-                      .pipe( map(data =>{
-                        return data["albums"].items
-                      }))
+                      .pipe( map(data => data["albums"].items))
     
   }
 
@@ -29,9 +27,7 @@ export class SpotifyService {
     })
 
     return this.http.get(`https://api.spotify.com/v1/search?q=${termino}&type=artist`,{headers})
-                      .pipe( map(data =>{
-                        return data["artists"].items
-                      }))
+                      .pipe( map(data => data["artists"].items))
     
 
   }
