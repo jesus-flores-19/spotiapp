@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -11,6 +12,7 @@ import { ArtistaComponent } from './componentes/artista/artista.component';
 import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetaComponent } from './componentes/shared/tarjeta/tarjeta.component';
+import { LoadingComponent } from './componentes/shared/loading/loading.component';
 
 
 @NgModule({
@@ -21,12 +23,13 @@ import { TarjetaComponent } from './componentes/shared/tarjeta/tarjeta.component
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetaComponent
+    TarjetaComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
