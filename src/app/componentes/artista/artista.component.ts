@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute} from "@angular/router"
 
 @Component({
   selector: 'app-artista',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistaComponent implements OnInit {
 
-  constructor() { }
+  idArtista: any;
+
+  constructor(public rutaActiva: ActivatedRoute) { 
+    this.idArtista = this.rutaActiva.snapshot.params["id"];
+  }
 
   ngOnInit() {
   }
