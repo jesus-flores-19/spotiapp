@@ -1,5 +1,5 @@
 <div class="col my-1">
-    <div class="card bg-dark bg-gradient">
+    <div class="card bg-dark bg-gradient puntero" (click)="verArtista(elemento)">
         <img [src]="elemento.images | noimage" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title text-white">{{elemento.name}}</h5>

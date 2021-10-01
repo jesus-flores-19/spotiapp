@@ -11,6 +11,17 @@ export class TarjetaComponent implements OnInit {
 
   constructor() { }
 
+  verArtista( item: any ){
+    let artistaId;
+    if(item.type === "artist"){
+      artistaId = item.id;
+    }else{
+      artistaId = item.artists[0].id
+    }
+    console.log(artistaId);
+    
+  }
+
   ngOnInit() {
   }
 
