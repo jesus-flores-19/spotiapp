@@ -1,8 +1,9 @@
-<div class="row justify-content-center my-3">
+<div class="row justify-content-center my-3 animated fadeIn">
     <div class="col-8">
         <input type="text" #termino (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista..">
     </div>
 </div>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+<app-loading *ngIf="activo"></app-loading>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 animated fadeIn">
     <app-tarjeta *ngFor="let artista of artistas" [elemento]="artista"></app-tarjeta>
 </div>

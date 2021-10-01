@@ -14,14 +14,23 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
   }
-  artistas: any = []
+
+
+  artistas: any = [];
+  activo: boolean = false;
 
 
   buscar(termino: string){
-    this.service.getArtists(termino).subscribe((data:any)=>{
-      this.artistas=data;
-      console.log(this.artistas);
-    })
+    if(termino){
+      this.activo =true;
+      this.service.getArtists(termino).subscribe((data:any)=>{
+        this.artistas=data;
+        this.activo =false;
+        console.log(this.artistas);
+      })
+    }else{
+      this.artistas = [];
+    }
   }
 
 }
