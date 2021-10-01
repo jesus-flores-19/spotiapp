@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-tarjeta',
@@ -9,7 +10,7 @@ export class TarjetaComponent implements OnInit {
 
   @Input() elemento: any = [];
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   verArtista( item: any ){
     let artistaId;
@@ -18,7 +19,7 @@ export class TarjetaComponent implements OnInit {
     }else{
       artistaId = item.artists[0].id
     }
-    console.log(artistaId);
+    this.router.navigate(["artista", artistaId]);
     
   }
 
