@@ -1,6 +1,8 @@
 # Spotiapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+En este proyecto consolidamos el conocimiento antes visto de componentes, tanto como padres e hijos; y la comunicación entre ellos. El uso de pipes en nuestra información. Y algo que es muy importante, que más adelante profundizaremos el mapeo de la información, con observadores dentro de nuestro servicio. 
+
+Cabe destacar el uso de la api de Spotify, un uso muy interesante donde más adelante se tiene pensado poner en práctica para realizar una copia del diseño actual de la plataforma. De momento estamos a nada de terminar el proyecto como esta diseñado.
 
 ## Development server
 
