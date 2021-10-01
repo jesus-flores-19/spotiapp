@@ -1,1 +1,11 @@
-<p>tarjeta works!</p>
+<div class="col my-1">
+    <div class="card bg-dark">
+        <img [src]="elemento.images | noimage" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-white">{{elemento.name}}</h5>
+            <p class="card-text">
+                <span class="text-muted" *ngFor="let artista of elemento.artists">{{artista.name}} </span>
+            </p>
+        </div>
+    </div>
+</div>
