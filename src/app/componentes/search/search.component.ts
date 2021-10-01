@@ -26,7 +26,6 @@ export class SearchComponent implements OnInit {
       this.service.getArtists(termino).subscribe((data:any)=>{
         this.artistas=data;
         this.activo =false;
-        console.log(this.artistas);
       })
     }else{
       this.artistas = [];
