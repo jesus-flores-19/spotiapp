@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from "@angular/router"
 import { SpotifyService } from 'src/app/services/spotify.service';
+import { Router} from "@angular/router"
 
 @Component({
   selector: 'app-artista',
@@ -12,15 +13,19 @@ export class ArtistaComponent implements OnInit {
   idArtista: any;
   artista: any = [];
   activo: boolean = true;
+  rutaPadre: string;
 
-  constructor(public rutaActiva: ActivatedRoute, public service: SpotifyService) { 
+  constructor(public rutaActiva: ActivatedRoute, public service: SpotifyService, public router: Router) { 
     this.idArtista = this.rutaActiva.snapshot.params["id"];
     this.service.getArtist(this.idArtista).subscribe((data: any)=>{
       this.artista = data;
       this.activo = false;
-      console.log(this.artista.followers.total);
-      
     })
+    this.rutaPadre = localStorage.getItem("rutaPadre");
+  }
+
+  backNavigation(){
+  this.router.navigate([this.rutaPadre]);    
   }
 
   ngOnInit() {
