@@ -17,8 +17,6 @@ export class ArtistaComponent implements OnInit {
     this.idArtista = this.rutaActiva.snapshot.params["id"];
     this.service.getArtist(this.idArtista).subscribe((data: any)=>{
       this.artista = data;
-      console.log(this.artista);
-      
     })
   }
 
