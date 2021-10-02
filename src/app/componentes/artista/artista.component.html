@@ -1,8 +1,9 @@
 <div class="row justify-content-center">
-    <div class=" col-9 d-flex position-relative" style="height: 350px;">
+    <div class=" col-9 d-flex position-relative" style="height: 300px;">
         <img class="d-block w-100 opacity-50" [src]="artista.images | noimage">
         <div class="position-absolute bottom-0 mb-4 ms-5">
-            <h1>{{artista.name}}</h1>
+            <p class="mb-2" style="font-size: 86px; line-height: 86px; font-weight: 900; letter-spacing: -.04em;">{{artista.name}}</p>
+            <p>{{artista.followers.total | number}} oyentes mensuales</p>
         </div>
     </div>
 </div>
