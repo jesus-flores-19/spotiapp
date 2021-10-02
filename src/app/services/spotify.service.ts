@@ -31,7 +31,8 @@ export class SpotifyService {
     return this.http.get(`${this.API_Spotify}/artists/${id}`,{headers: this.headers})
   }
   getTracks(id){
-    return
+    return this.http.get(`${this.API_Spotify}/artists/${id}/tracks`,{headers: this.headers})
+                      .pipe( map(data => data["artists"].items))
   }
  
 }
