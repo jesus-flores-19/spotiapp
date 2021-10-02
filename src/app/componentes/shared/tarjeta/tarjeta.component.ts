@@ -9,6 +9,7 @@ import {Router} from "@angular/router"
 export class TarjetaComponent implements OnInit {
 
   @Input() elemento: any = [];
+  @Input() rutaPadre: string;
 
   constructor(public router: Router) { }
 
@@ -19,6 +20,7 @@ export class TarjetaComponent implements OnInit {
     }else{
       artistaId = item.artists[0].id
     }
+    localStorage.setItem("rutaPadre", this.rutaPadre)
     this.router.navigate(["artista", artistaId]);
     
   }
