@@ -6,7 +6,7 @@
             <p class="mb-2" style="font-size: 86px; line-height: 86px; font-weight: 900; letter-spacing: -.04em;">{{artista.name}}</p>
             <p>{{artista.followers.total | number}} oyentes mensuales</p>
         </div>
-        <div class="position-absolute top-0 mt-2 ms-2 p-1 btn btn-dark rounded-circle text-center" style="width: 40px; height: 40px; line-height: 40px;" routerLink="/home">
+        <div class="position-absolute top-0 mt-2 ms-2 p-1 btn btn-dark rounded-circle text-center" style="width: 40px; height: 40px; line-height: 40px;" (click)="backNavigation()">
             <span class="material-icons">navigate_before</span>
         </div>
     </div>
