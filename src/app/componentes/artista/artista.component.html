@@ -1,1 +1,8 @@
-<p>artista works!</p>
+<div class="row justify-content-center">
+    <div class=" col-9 d-flex position-relative" style="height: 350px;">
+        <img class="d-block w-100 opacity-50" [src]="artista.images | noimage">
+        <div class="position-absolute bottom-0 mb-4 ms-5">
+            <h1>{{artista.name}}</h1>
+        </div>
+    </div>
+</div>
