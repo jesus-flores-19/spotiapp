@@ -13,7 +13,7 @@ export class SpotifyService {
   API_Spotify = "https://api.spotify.com/v1"
   
   headers= new HttpHeaders({
-    'Authorization': "Bearer BQDGQNwtA1SATCSJg3PFyM0VN-ZijiAj4Es1vIXnbyiwNzc1uGq241PETLWw7dr4zgXzTdiC3UHm3yOktr0"
+    'Authorization': "Bearer BQBzRAWHIIL0BBG7eqM4vlGExiGXwBVZeQsVYx1INiOT1uZyTrchn2FKJTjLU4mEYgvzwMCWxKhFGSnsvjs"
   })
 
 
