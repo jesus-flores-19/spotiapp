@@ -1,10 +1,13 @@
 <app-loading *ngIf="activo"></app-loading>
-<div class="row justify-content-center animated fadeIn">
+<div *ngIf="!activo" class="row justify-content-center animated fadeIn">
     <div class=" col-9 position-relative divpadre">
-        <img class="d-block" [src]="artista.images | noimage" style="width: 100%; height: max-content; margin-top: -50px;">
+        <img class="d-block opacity-50" [src]="artista.images | noimage" style="width: 100%; height: max-content; margin-top: -50px;">
         <div class="position-absolute bottom-0 mb-4 ms-5">
             <p class="mb-2" style="font-size: 86px; line-height: 86px; font-weight: 900; letter-spacing: -.04em;">{{artista.name}}</p>
             <p>{{artista.followers.total | number}} oyentes mensuales</p>
+        </div>
+        <div class="position-absolute top-0 mt-2 ms-2 p-1 btn btn-dark rounded-circle text-center" style="width: 40px; height: 40px; line-height: 40px;" routerLink="/home">
+            <span class="material-icons">navigate_before</span>
         </div>
     </div>
 </div>

@@ -2,3 +2,11 @@
     height: 300px;
     overflow: hidden;
 }
+
+.btn-dark {
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.btn-dark:hover {
+    color: white;
+}

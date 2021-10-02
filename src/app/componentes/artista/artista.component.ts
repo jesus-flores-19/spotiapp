@@ -18,7 +18,7 @@ export class ArtistaComponent implements OnInit {
     this.service.getArtist(this.idArtista).subscribe((data: any)=>{
       this.artista = data;
       this.activo = false;
-      console.log(this.artista.images);
+      console.log(this.artista.followers.total);
       
     })
   }
