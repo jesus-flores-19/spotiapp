@@ -1,7 +1,7 @@
 <app-loading *ngIf="activo"></app-loading>
 <div class="row justify-content-center animated fadeIn">
-    <div class=" col-9 d-flex position-relative" style="height: 300px;">
-        <img class="d-block w-100 opacity-50" [src]="artista.images | noimage">
+    <div class=" col-9 position-relative divpadre">
+        <img class="d-block" [src]="artista.images | noimage" style="width: 100%; height: max-content; margin-top: -50px;">
         <div class="position-absolute bottom-0 mb-4 ms-5">
             <p class="mb-2" style="font-size: 86px; line-height: 86px; font-weight: 900; letter-spacing: -.04em;">{{artista.name}}</p>
             <p>{{artista.followers.total | number}} oyentes mensuales</p>

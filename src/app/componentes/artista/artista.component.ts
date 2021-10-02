@@ -5,7 +5,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 @Component({
   selector: 'app-artista',
   templateUrl: './artista.component.html',
-  styles: []
+  styleUrls: ["./artista.component.css"]
 })
 export class ArtistaComponent implements OnInit {
 
@@ -18,6 +18,8 @@ export class ArtistaComponent implements OnInit {
     this.service.getArtist(this.idArtista).subscribe((data: any)=>{
       this.artista = data;
       this.activo = false;
+      console.log(this.artista.images);
+      
     })
   }
 
