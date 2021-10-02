@@ -11,12 +11,13 @@ export class ArtistaComponent implements OnInit {
 
   idArtista: any;
   artista: any = [];
-  loading: boolean = true;
+  activo: boolean = true;
 
   constructor(public rutaActiva: ActivatedRoute, public service: SpotifyService) { 
     this.idArtista = this.rutaActiva.snapshot.params["id"];
     this.service.getArtist(this.idArtista).subscribe((data: any)=>{
       this.artista = data;
+      this.activo = false;
     })
   }
 
