@@ -11,7 +11,6 @@ export class ArtistaComponent implements OnInit {
 
   idArtista: any;
   artista: any = [];
-  urll: any;
 
   constructor(public rutaActiva: ActivatedRoute, public service: SpotifyService) { 
     this.idArtista = this.rutaActiva.snapshot.params["id"];
