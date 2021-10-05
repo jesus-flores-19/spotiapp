@@ -12,6 +12,7 @@ export class ArtistaComponent implements OnInit {
 
   idArtista: any;
   artista: any = [];
+  topTracks: any = [];
   activo: boolean = true;
   rutaPadre: string;
 
@@ -22,6 +23,9 @@ export class ArtistaComponent implements OnInit {
       this.activo = false;
     })
     this.rutaPadre = localStorage.getItem("rutaPadre");
+    this.service.getTopTracks(this.idArtista).subscribe((data:any) => {
+      console.log(data);
+    })
   }
 
   backNavigation(){
