@@ -13,6 +13,7 @@ import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetaComponent } from './componentes/shared/tarjeta/tarjeta.component';
 import { LoadingComponent } from './componentes/shared/loading/loading.component';
+import { DoomseguroPipe } from './pipes/doomseguro.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoadingComponent } from './componentes/shared/loading/loading.component
     NavbarComponent,
     NoimagePipe,
     TarjetaComponent,
-    LoadingComponent
+    LoadingComponent,
+    DoomseguroPipe
   ],
   imports: [
     BrowserModule,
