@@ -24,7 +24,9 @@ export class ArtistaComponent implements OnInit {
     })
     this.rutaPadre = localStorage.getItem("rutaPadre");
     this.service.getTopTracks(this.idArtista).subscribe((data:any) => {
-      console.log(data);
+      this.topTracks = data;
+      console.log(this.topTracks);
+      
     })
   }
 
