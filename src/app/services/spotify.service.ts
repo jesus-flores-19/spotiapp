@@ -13,7 +13,7 @@ export class SpotifyService {
   API_Spotify = "https://api.spotify.com/v1"
   
   headers= new HttpHeaders({
-    'Authorization': "Bearer BQBzRAWHIIL0BBG7eqM4vlGExiGXwBVZeQsVYx1INiOT1uZyTrchn2FKJTjLU4mEYgvzwMCWxKhFGSnsvjs"
+    'Authorization': "Bearer BQBwKQckpmZ1JsulqXrnxS6JyOUTbZbNM-xg3BGgOreNcqVNvoqkA_njxhckWUhNpCkjFqIL7P5XHa4NV-g"
   })
 
 
@@ -30,8 +30,9 @@ export class SpotifyService {
   getArtist(id){
     return this.http.get(`${this.API_Spotify}/artists/${id}`,{headers: this.headers})
   }
-  getTracks(id){
-    return this.http.get(`${this.API_Spotify}/artists/${id}/tracks`,{headers: this.headers})
+
+  getTopTracks(id){
+    return this.http.get(`${this.API_Spotify}/artists/${id}/top-tracks`,{headers: this.headers})
                       .pipe( map(data => data["artists"].items))
   }
  
