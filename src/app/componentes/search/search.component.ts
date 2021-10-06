@@ -17,6 +17,8 @@ export class SearchComponent implements OnInit {
 
   artistas: any = [];
   activo: boolean = false;
+  error: boolean = false;
+  mensajeError: string;
 
 
   buscar(termino: string){
@@ -25,7 +27,11 @@ export class SearchComponent implements OnInit {
       this.service.getArtists(termino).subscribe((data:any)=>{
         this.artistas=data;
         this.activo =false;
-      })
+      }, (error: any) => {
+        this.error = true;
+        this.activo = false;
+        this.mensajeError = error.error.error.message
+      }) 
     }else{
       this.artistas = [];
     }

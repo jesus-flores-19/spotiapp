@@ -4,6 +4,10 @@
     </div>
 </div>
 <app-loading *ngIf="activo"></app-loading>
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+    <h3>Error</h3>
+    <p>{{mensajeError}}</p>
+</div>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 animated fadeIn">
     <app-tarjeta *ngFor="let artista of artistas" [elemento]="artista" rutaPadre="search"></app-tarjeta>
 </div>
