@@ -1,5 +1,9 @@
 <h1 class="my-3">Escuchado Recientemente <small class="text-muted"></small></h1>
 <app-loading *ngIf="activo"></app-loading>
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+    <h3>Error</h3>
+    <p>{{mensajeError}}</p>
+</div>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 animated fadeIn">
     <app-tarjeta *ngFor="let cancion of nuevasCanciones" [elemento]="cancion" rutaPadre="home"></app-tarjeta>
 </div>
