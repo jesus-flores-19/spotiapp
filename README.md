@@ -4,6 +4,8 @@ En este proyecto consolidamos el conocimiento antes visto de componentes, tanto 
 
 Cabe destacar el uso de la api de Spotify, un uso muy interesante donde más adelante se tiene pensado poner en práctica para realizar una copia del diseño actual de la plataforma. De momento estamos a nada de terminar el proyecto como esta diseñado.
 
+Damos por finalizada una etapa del proyecto, con algunos cambios personales con el proyecto llevabo a cabo en la sección. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
